@@ -1,0 +1,21 @@
+<accordion [closeOthers]="true" [isAnimated]="true" *ngIf="posts">
+  <accordion-group heading="{{ post.title }}" *ngFor="let post of posts">
+    <div class="align-middle">
+      <h4 class="d-inline">{{ post.content }}</h4>
+      <button
+        type="button"
+        class="btn btn-danger btn-sm float-right"
+        (click)="onDeletePost(post)"
+      >
+        X
+      </button>
+      <!-- <button
+        type="button"
+        class="btn btn-primary btn-sm float-right"
+        (click)="onEditPost(post)"
+      >
+        Edit
+      </button> -->
+    </div>
+  </accordion-group>
+</accordion>
