@@ -1,4 +1,8 @@
-<div class="card">
+<div
+  class="card"
+  #myDiv="animated"
+  [animAted]="{ time: 1500, animation: 'pulse' }"
+>
   <div class="card-header">Create Post</div>
   <div class="card-body">
     <form [formGroup]="postForm">
@@ -26,7 +30,7 @@
         type="button"
         class="btn btn-primary"
         [disabled]="!postForm.valid"
-        (click)="onAddPost()"
+        (click)="onAddPost(); myDiv.animate()"
       >
         Save
       </button>

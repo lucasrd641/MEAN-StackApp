@@ -6,10 +6,16 @@ import { Post } from '../models/post.model';
   providedIn: 'root',
 })
 export class PostService {
-  posts: Post[] = [];
+  posts: Post[] = [
+    { title: 'Teste 1', content: 'Esse é o Primeiro Teste' },
+    { title: 'Teste 2', content: 'Esse é o Segundo Teste' },
+    { title: 'Teste 3', content: 'Esse é o Terceiro Teste' },
+  ];
   postChanged = new Subject<Post[]>();
   constructor() {}
-
+  // getPostsListener() {
+  //   this.postChanged.asObservable();
+  // }
   getPosts() {
     return this.posts.slice();
   }

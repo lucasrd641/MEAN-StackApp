@@ -1,4 +1,4 @@
-<accordion [closeOthers]="true" [isAnimated]="true" *ngIf="posts">
+<accordion [closeOthers]="true" [isAnimated]="true">
   <accordion-group heading="{{ post.title }}" *ngFor="let post of posts">
     <div class="align-middle">
       <h4 class="d-inline">{{ post.content }}</h4>

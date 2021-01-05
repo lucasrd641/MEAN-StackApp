@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { NgxAnimationsModule } from 'ngx-animations';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     AccordionModule.forRoot(),
     CollapseModule,
     FormsModule,
+    NgxAnimationsModule,
     BrowserModule,
     AppRoutingModule,
   ],

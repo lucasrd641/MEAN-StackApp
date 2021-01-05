@@ -11,6 +11,9 @@ export class AppComponent implements OnInit {
   hasPosts = false;
   constructor(private postService: PostService) {}
   ngOnInit(): void {
+    if (this.postService.getPosts()) {
+      this.hasPosts = true;
+    }
     this.postService.postChanged.subscribe((posts: Post[]) => {
       posts.length > 0 ? (this.hasPosts = true) : (this.hasPosts = false);
     });
